@@ -55,6 +55,12 @@ $(document).ready(function() {
       document.querySelector('.timestart').innerHTML = start;
       document.querySelector('.timeend').innerHTML = end;
       document.querySelector('.timetaken').innerHTML = timetaken/1000;
+      $.ajax({
+        type: "get",
+        url:'/games/1/edit', //Defined in your routes file
+        data: (
+        'winner=1' )
+      });
     }
 
     function checkcomplete(){

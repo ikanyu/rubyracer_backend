@@ -27,8 +27,10 @@ end
 
 #5 return an HTML form for editing a status
 get '/games/:id/edit' do
-  @comment = Comment.find(params[:id])
-  erb :"comment/edit_comment"
+  @winner = params[:winner]
+  byebug
+  # @comment = Comment.find(params[:id])
+  # erb :"comment/edit_comment"
 end
 
 #6 update a specific status
